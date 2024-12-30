@@ -1,10 +1,3 @@
-## 0.7.0
-
- - **DOCS**: Move Documentation to docs.page ([#287](https://github.com/abausg/home_widget/issues/287)). ([52ee746a](https://github.com/abausg/home_widget/commit/52ee746ad1d1dd9ef2aa9f1c61e482825f73d9d9))
- - **DOCS**: Improve pubspec metadata ([#283](https://github.com/abausg/home_widget/issues/283)). ([f23c63e8](https://github.com/abausg/home_widget/commit/f23c63e8d393708aaf197ccb54b391d81a765a19))
- - **FIX**: Fix iOS Background Worker ([#244](https://github.com/abausg/home_widget/issues/244)). ([bb4895c](https://github.com/abausg/home_widget/commit/bb4895c5273fdb15858df544427ce03308ddd790))
- - **FIX**: Fix storing Long on Android ([#280](https://github.com/abausg/home_widget/issues/280)). ([284cd51](https://github.com/abausg/home_widget/commit/284cd5120a1bbc8cca837742882e8c10465ba567))
-
 ## 0.6.0
 * Require Flutter 3.20+ due to changes in `ViewConfiguration`
 
@@ -73,7 +66,7 @@ stepushchik-denis-gismart](https://github.com/stepushchik-denis-gismart)
 * Fix collision for Deeplinks [#42](https://github.com/ABausG/home_widget/pull/42) by [mgonzalezc](https://github.com/mgonzalezc)
 * Make Android PendingIntents immutable for Android 12 [#49](https://github.com/ABausG/home_widget/pull/49) by [mgonzalezc](https://github.com/mgonzalezc)
 * Update Gradle Versions and target Android SDK 31
-* Fix Issues relating to `initiallyLaunchedFromHomeWidget`
+* Fix Issues rrelating to `initiallyLaunchedFromHomeWidget`
   * [#48](https://github.com/ABausG/home_widget/issues/48) Call not completing on iOS
   * [#40](https://github.com/ABausG/home_widget/issues/40) Cast exception on Android for cases launched from Widget but without data Uri
 

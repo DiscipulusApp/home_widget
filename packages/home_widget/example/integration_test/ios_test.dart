@@ -24,15 +24,13 @@ void main() {
       'floatingNumberKey': 12.1,
       'nullValueKey': null,
       'uint8ListKey': Uint8List.fromList([]),
-      'largeDoubleKey': double.infinity,
-      'longKey': DateTime(2024).millisecondsSinceEpoch,
     };
 
     const defaultValue = MapEntry('defaultKey', 'defaultValue');
 
     setUpAll(() async {
       // Add Group Id
-      await HomeWidget.setAppGroupId('group.es.antonborri.integrationTest');
+      await HomeWidget.setAppGroupId('group.es.antonborri.integrationtest');
       // Clear all Data
       for (final key in testData.keys) {
         await HomeWidget.saveWidgetData(key, null);
@@ -41,7 +39,7 @@ void main() {
 
     group('Test Data operations', () {
       for (final testSet in testData.entries) {
-        testWidgets('Test ${testSet.key}', (tester) async {
+        testWidgets('Test ${testSet.value?.runtimeType}', (tester) async {
           // Save Data
           await HomeWidget.saveWidgetData(testSet.key, testSet.value);
 
@@ -83,7 +81,7 @@ void main() {
       testWidgets(
           'Initially Launched completes and returns null if not launched from widget',
           (tester) async {
-        await HomeWidget.setAppGroupId('group.es.antonborri.integrationTest');
+        await HomeWidget.setAppGroupId('group.es.antonborri.integrationtest');
         final retrievedData =
             await HomeWidget.initiallyLaunchedFromHomeWidget();
         expect(retrievedData, isNull);
@@ -95,7 +93,7 @@ void main() {
           final deviceInfo = await DeviceInfoPlugin().iosInfo;
           final hasInteractiveWidgets =
               double.parse(deviceInfo.systemVersion.split('.').first) >= 17.0;
-          await HomeWidget.setAppGroupId('group.es.antonborri.integrationTest');
+          await HomeWidget.setAppGroupId('group.es.antonborri.integrationtest');
           if (hasInteractiveWidgets) {
             final registerCallbackResult =
                 await HomeWidget.registerInteractivityCallback(

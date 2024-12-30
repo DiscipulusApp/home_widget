@@ -1,21 +1,7 @@
 name: home_widget
 description: A plugin to provide a common interface for creating HomeScreen Widgets for Android and iOS.
-version: 0.7.0
+version: 0.6.0
 repository: https://github.com/ABausG/home_widget
-funding:
-  - https://github.com/sponsors/ABausG/
-topics:
-  - home-screen-widget
-  - native
-  - android
-  - ios
-screenshots:
-  - description: 'iOS Counter HomeScreen Widget'
-    path: pub/screenshots/ios-counter.gif
-  - description: 'Android HomeScreen Widget'
-    path: pub/screenshots/android.png
-issue_tracker: https://github.com/ABausG/home_widget/issues
-documentation: https://docs.page/ABausG/home_widget
 
 environment:
   sdk: '>=3.4.0 <4.0.0'
@@ -44,3 +30,7 @@ flutter:
         pluginClass: HomeWidgetPlugin
       ios:
         pluginClass: HomeWidgetPlugin
+        sharedDarwinSource: true
+      macos:
+        pluginClass: HomeWidgetPlugin
+        sharedDarwinSource: true

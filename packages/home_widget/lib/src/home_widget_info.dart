@@ -1,9 +1,9 @@
 /// Represents information about the pinned home widget.
 class HomeWidgetInfo {
-  /// Only iOS. The size of the widget: small, medium, or large.
+  /// Only iOS & macOS. The size of the widget: small, medium, or large.
   String? iOSFamily;
 
-  /// Only iOS. The string specified during creation of the widget’s configuration.
+  /// Only iOS & macOS. The string specified during creation of the widget’s configuration.
   String? iOSKind;
 
   /// Only Android. Unique identifier for each instance of the widget, used for tracking individual widget usage.
